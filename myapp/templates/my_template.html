@@ -1,0 +1,30 @@
+<!-- myapp/templates/my_template.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cache Example</title>
+</head>
+<body>
+    <h1>Product List</h1>
+    {% if product_list %}
+        <ul>
+            {% for product in product_list %}
+                <li>{{ product }}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No products found.</p>
+    {% endif %}
+
+    <h1>User Data</h1>
+    {% if user_data %}
+        <p>Name: {{ user_data.name }}</p>
+        <p>Age: {{ user_data.age }}</p>
+    {% else %}
+        <p>No user data available.</p>
+    {% endif %}
+</body>
+</html>
